@@ -1,7 +1,8 @@
-from app.response import Response
-from in_custom_decorators.status_constants import HttpStatusCode
+from custom_decorators.response import Response
+from custom_decorators.status_constants import HttpStatusCode
 
-from in_exceptions import PermissionDenied
+from exceptions import PermissionDenied
+
 
 def register_error_handlers(api):
     @api.errorhandler(PermissionDenied)
